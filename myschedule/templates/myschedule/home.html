@@ -1,0 +1,14 @@
+{% extends 'myschedule/base.html' %}
+
+{% block content %}
+
+    <h1>홈</h1>
+ 
+    {% for schedule in schedules.all %}
+        <div>
+            <h2><a href = "{% url 'detail' schedule.id %}">{{schedule.title}}</a></h2>
+            <p>{{schedule.schedule_date}}</p>
+            <p>{{schedule.memo}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

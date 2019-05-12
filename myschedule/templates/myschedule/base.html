@@ -1,0 +1,16 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href ="{% static 'css/myschedule.css' %}">
+</head>
+
+<body>
+    <h1><strong>lion 블로그</strong></h1>
+    <img src={% static 'img/drawingofme.jpg' %} height="300px" alt="">
+        <div>
+            <a href="{% url 'new' %}">새 글</a>
+            <a href="{% url 'home' %}">홈</a>
+        </div>
+    {% block content %}
+    {% endblock %}
+</body>
